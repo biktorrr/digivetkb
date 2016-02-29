@@ -1,0 +1,132 @@
+@prefix    rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix     rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix  dv: <http://example.org/digivet/> .
+
+
+# --- ANIMALS ----
+
+
+dv:Animal 
+	a rdfs:Class ; 
+	rdfs:label "Animal"@en .
+
+dv:Cow 
+	a rdfs:Class ;
+	rdfs:subClassOf dv:Animal ;
+	dv:canCarryDisease dv:Plastic_bag ;
+	dv:canCarryDisease dv:Tetanus ;
+	dv:canCarryDisease dv:Tickborne ;
+	dv:canCarryDisease dv:Brucellosis ;
+	dv:canCarryDisease dv:Anthrax ;
+	dv:canCarryDisease dv:CBPP ;
+	dv:canCarryDisease dv:Black_leg ;
+	dv:canCarryDisease dv:Foot-and-mouth ;
+	dv:canCarryDisease dv:Dehydration ;
+	dv:canCarryDisease dv:Bovine_tuberculosis ;
+	dv:canCarryDisease dv:Pneumonia ;
+	rdfs:label "Cow"@en .
+	
+dv:Sheep
+	a rdfs:Class ;
+	rdfs:subClassOf  dv:Animal ;
+	rdfs:label "Sheep"@en .
+
+dv:Goat
+	a rdfs:Class ;
+	rdfs:subClassOf dv:Animal ;
+	rdfs:label "Goat"@en .		
+	
+dv:Pig 
+	a rdfs:Class ;
+	rdfs:subClassOf dv:Animal ;
+	rdfs:label "Pig"@en .
+	
+dv:Dog
+	a rdfs:Class ;
+	rdfs:subClassOf dv:Animal ;
+	rdfs:label "Dog"@en .
+	
+# --- DISEASES ----
+
+dv:Disease	
+	a rdfs:Class ; 
+	rdfs:label "Disease"@en .
+	
+dv:Plastic_bag	
+	a dv:Disease;
+	rdfs:label "Plastic Bag"@en .
+	 
+dv:Tetanus		
+	a dv:Disease;
+	rdfs:label "Tetanus"@en .
+	 	
+dv:Tickborne	
+	a dv:Disease;
+	rdfs:label "Tickborne"@en .
+	 	
+dv:Brucellosis_m	
+	a dv:Disease;
+	rdfs:label "Brucellosis_m"@en .
+	 
+dv:Brucellosis_v	
+	a dv:Disease;
+	rdfs:label "Brucellosis_v"@en .
+	 
+dv:Anthrax	
+	a dv:Disease;
+	rdfs:label "Anthrax"@en .
+	 
+dv:CBPP	
+	a dv:Disease;
+	rdfs:label "CBPP"@en .
+	 
+dv:Black_leg		
+	a dv:Disease;
+	rdfs:label "Black_leg"@en .
+	 	
+dv:Foot-and-mouth	
+	a dv:Disease;
+	rdfs:label "Foot-and-mouth"@en .
+	 
+dv:Dehydration	
+	a dv:Disease;
+	rdfs:label "Dehydration"@en .
+	 
+dv:Bovine_tuberculosis	
+	a dv:Disease;
+	rdfs:label "Bovine_tuberculosis"@en .
+	 
+dv:Pneumonia 	
+	a dv:Disease;
+	rdfs:label "Pneumonia"@en .
+	 
+dv:PPR	
+	a dv:Disease;
+	rdfs:label "PPR"@en .
+	 
+dv:Rabies	
+	a dv:Disease;
+	rdfs:label "Rabies"@en .
+
+# ---- symptom ---
+	
+dv:depression 
+	a dv:Symptom;
+	dv:has_disease dv:PPR; # soms in xml tag, soms in naam tabel
+	rdfs:label "Depression".
+		
+# ---- questions ---
+
+dv:question_general_2 
+	a dv:Question ;
+	rdfs:label "Does your animal show signs of depression?";
+	dv:audiofile "sounds/depression.mp3";
+	dv:has_symptom dv:depression;
+	dv:use_table "table_non_urgent_ppr".
+	
+	
+		
+		
+		
+		
