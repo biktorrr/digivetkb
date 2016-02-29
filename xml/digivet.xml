@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.1.14
+- http://www.phpmyadmin.net
+-
+- Machine: 127.0.0.1
+- Gegenereerd op: 29 feb 2016 om 14:10
+- Serverversie: 5.6.17
+- PHP-versie: 5.5.12
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="digivet" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="table_animals">
+                CREATE TABLE `table_animals` (
+                  `id_animal` int(11) NOT NULL AUTO_INCREMENT,
+                  `animal_type` text NOT NULL,
+                  PRIMARY KEY (`id_animal`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_animal_diseases">
+                CREATE TABLE `table_animal_diseases` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_animal` int(11) NOT NULL,
+                  `animal_type` text NOT NULL,
+                  `disease` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_cow">
+                CREATE TABLE `table_cow` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_general_question` int(11) NOT NULL,
+                  `question` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_dog">
+                CREATE TABLE `table_dog` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_general_question` int(11) NOT NULL,
+                  `question` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_general_question">
+                CREATE TABLE `table_general_question` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  `use_table` text NOT NULL,
+                  `disease` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_goat">
+                CREATE TABLE `table_goat` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_general_question` int(11) NOT NULL,
+                  `question` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_anthrax">
+                CREATE TABLE `table_non_urgent_anthrax` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_black_leg">
+                CREATE TABLE `table_non_urgent_black_leg` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_bovine_tuberculosis">
+                CREATE TABLE `table_non_urgent_bovine_tuberculosis` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_brucellosis">
+                CREATE TABLE `table_non_urgent_brucellosis` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_cbpp">
+                CREATE TABLE `table_non_urgent_cbpp` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_dehydration">
+                CREATE TABLE `table_non_urgent_dehydration` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_foot_mouth">
+                CREATE TABLE `table_non_urgent_foot_mouth` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_plastic_bag">
+                CREATE TABLE `table_non_urgent_plastic_bag` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_pneumonia">
+                CREATE TABLE `table_non_urgent_pneumonia` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_ppr">
+                CREATE TABLE `table_non_urgent_ppr` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_rabies">
+                CREATE TABLE `table_non_urgent_rabies` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_tetanus">
+                CREATE TABLE `table_non_urgent_tetanus` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_non_urgent_tickborne">
+                CREATE TABLE `table_non_urgent_tickborne` (
+                  `id_general_question` int(11) NOT NULL AUTO_INCREMENT,
+                  `question` text NOT NULL,
+                  `audiofile` text NOT NULL,
+                  `symptom` text NOT NULL,
+                  PRIMARY KEY (`id_general_question`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_pig">
+                CREATE TABLE `table_pig` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_general_question` int(11) NOT NULL,
+                  `question` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="table_sheep">
+                CREATE TABLE `table_sheep` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `id_general_question` int(11) NOT NULL,
+                  `question` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="variables_diseases">
+                CREATE TABLE `variables_diseases` (
+                  `PPR_disease` int(11) NOT NULL,
+                  `Plastic_bags_disease` int(11) NOT NULL,
+                  `Tetanus_disease` int(11) NOT NULL,
+                  `Tickborne_disease` int(11) NOT NULL,
+                  `Brucellosis_disease` int(11) NOT NULL,
+                  `Anthrax_disease` int(11) NOT NULL,
+                  `CBPP_disease` int(11) NOT NULL,
+                  `Black_leg_disease` int(11) NOT NULL,
+                  `Foot_and_mouth_disease` int(11) NOT NULL,
+                  `Rabies_disease` int(11) NOT NULL,
+                  `Dehydration` int(11) NOT NULL,
+                  `Pneumonia` int(11) NOT NULL,
+                  `BovineTuberculosis` int(11) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="variables_general">
+                CREATE TABLE `variables_general` (
+                  `question_id` int(11) NOT NULL,
+                  `general_id` int(11) NOT NULL,
+                  `use_table` text NOT NULL,
+                  `kind_of_animal` text NOT NULL,
+                  `urgent` int(11) NOT NULL,
+                  `notUrgent` int(11) NOT NULL,
+                  `decision` int(11) NOT NULL,
+                  `id` int(11) NOT NULL,
+                  `first` int(11) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="variables_not_urgent">
+                CREATE TABLE `variables_not_urgent` (
+                  `wound` int(1) NOT NULL,
+                  `dropMilkProduction` int(1) NOT NULL,
+                  `rapidBreathing` int(1) NOT NULL,
+                  `lossCondition` int(1) NOT NULL,
+                  `trembling` int(1) NOT NULL,
+                  `swellingThigh` int(1) NOT NULL,
+                  `convulsions` int(1) NOT NULL,
+                  `abortion` int(1) NOT NULL,
+                  `stillborn` int(1) NOT NULL,
+                  `weakCalfBorn` int(1) NOT NULL,
+                  `retentionMembranes` int(1) NOT NULL,
+                  `fatigue` int(1) NOT NULL,
+                  `twitchingMuscles` int(1) NOT NULL,
+                  `anxiousAndEasilyExcited` int(1) NOT NULL,
+                  `bloat` int(1) NOT NULL,
+                  `diarrhea` int(1) NOT NULL,
+                  `drinkingLotsOfWater` int(1) NOT NULL,
+                  `insects` int(1) NOT NULL,
+                  `notEnoughFood` int(1) NOT NULL,
+                  `drinksLitte` int(1) NOT NULL,
+                  `swollenLymphNodes` int(1) NOT NULL,
+                  `alteredVocalisation` int(1) NOT NULL,
+                  `exaggeratedMovements` int(1) NOT NULL,
+                  `increaseSexualActivity` int(1) NOT NULL,
+                  `depression` int(1) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="variables_urgent">
+                CREATE TABLE `variables_urgent` (
+                  `fever` int(11) NOT NULL,
+                  `highTemperature` int(11) NOT NULL,
+                  `eyesInOrbid` int(11) NOT NULL,
+                  `extremelyThin` int(11) NOT NULL,
+                  `dropHead` int(11) NOT NULL,
+                  `isolatedFromHerd` int(11) NOT NULL,
+                  `weightLoss` int(11) NOT NULL,
+                  `unwillingnessToMove` int(11) NOT NULL,
+                  `appetiteLoss` int(11) NOT NULL,
+                  `quiveringLipsAndFrothingMouth` int(11) NOT NULL,
+                  `blistersTeath` int(11) NOT NULL,
+                  `lameness` int(11) NOT NULL,
+                  `difficultBreathing` int(11) NOT NULL,
+                  `suddenDeath` int(11) NOT NULL,
+                  `bloodFromOpeningsAfterDeath` int(11) NOT NULL,
+                  `collapse` int(11) NOT NULL,
+                  `infectionMembranes` int(11) NOT NULL,
+                  `swollenTesticles` int(11) NOT NULL,
+                  `protrudingEyelid` int(11) NOT NULL,
+                  `spasm` int(11) NOT NULL,
+                  `hardBallInStomach` int(11) NOT NULL,
+                  `cough` int(11) NOT NULL,
+                  `snot` int(11) NOT NULL,
+                  `aggressive` int(11) NOT NULL,
+                  `weirdNoises` int(11) NOT NULL,
+                  `limping` int(11) NOT NULL,
+                  `bleeding` int(11) NOT NULL,
+                  `difficultSwallowing` int(11) NOT NULL,
+                  `blistersMouth` int(11) NOT NULL,
+                  `blistersFeet` int(11) NOT NULL,
+                  `seizures` int(11) NOT NULL,
+                  `pinkMassEye` int(11) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Databank: 'digivet'
+    -->
+    <database name="digivet">
+        <!-- Tabel table_animals -->
+        <table name="table_animals">
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+        </table>
+        <table name="table_animals">
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+        </table>
+        <table name="table_animals">
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+        </table>
+        <table name="table_animals">
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+        </table>
+        <table name="table_animals">
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+        </table>
+        <!-- Tabel table_animal_diseases -->
+        <table name="table_animal_diseases">
+            <column name="id">1</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Plastic_bag</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">2</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">3</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">4</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">5</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Anthrax</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">6</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">CBPP</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">7</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Black_leg</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">8</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Foot-and-mouth</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">9</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">10</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">11</column>
+            <column name="id_animal">1</column>
+            <column name="animal_type">cow</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">12</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">PPR</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">13</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Plastic_bag</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">14</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">15</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">16</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">17</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Anthrax</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">18</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Black_leg</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">19</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Foot-and-mouth</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">20</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">21</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">22</column>
+            <column name="id_animal">2</column>
+            <column name="animal_type">sheep</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">23</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">PPR</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">24</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Plastic_bag</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">25</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">26</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">27</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">28</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Foot-and-mouth</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">29</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">30</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">31</column>
+            <column name="id_animal">3</column>
+            <column name="animal_type">goat</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">32</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">33</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">34</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">35</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Anthrax</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">36</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Foot-and-mouth</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">37</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">38</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">39</column>
+            <column name="id_animal">4</column>
+            <column name="animal_type">pig</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">40</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">41</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">42</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">43</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Rabies</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">44</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">45</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_animal_diseases">
+            <column name="id">46</column>
+            <column name="id_animal">5</column>
+            <column name="animal_type">dog</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <!-- Tabel table_cow -->
+        <table name="table_cow">
+            <column name="id">1</column>
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal appear to have a hard ball in its stomach?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">2</column>
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">3</column>
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal shows signs of fatigue?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">4</column>
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">5</column>
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">6</column>
+            <column name="id_general_question">8</column>
+            <column name="question">Does your animal suffer from convulsions?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">7</column>
+            <column name="id_general_question">9</column>
+            <column name="question">Does your animal isolate itself from the herd?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">8</column>
+            <column name="id_general_question">10</column>
+            <column name="question">Does your animal have a swelling on the thigh?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">9</column>
+            <column name="id_general_question">11</column>
+            <column name="question">Does your animal have blisters on its feet?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">10</column>
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animal sunken into the orbit?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">11</column>
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+        </table>
+        <table name="table_cow">
+            <column name="id">12</column>
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+        </table>
+        <!-- Tabel table_dog -->
+        <table name="table_dog">
+            <column name="id">1</column>
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">2</column>
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of fatigue?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">3</column>
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">4</column>
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">5</column>
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animal sunken into the orbit?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">6</column>
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">7</column>
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+        </table>
+        <table name="table_dog">
+            <column name="id">8</column>
+            <column name="id_general_question">15</column>
+            <column name="question">Does your animal suffer from seizures?</column>
+        </table>
+        <!-- Tabel table_general_question -->
+        <table name="table_general_question">
+            <column name="id_general_question">1</column>
+            <column name="question">What kind of animal do you have?</column>
+            <column name="audiofile">sounds/animal_type.mp3</column>
+            <column name="symptom"></column>
+            <column name="use_table"></column>
+            <column name="disease"></column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal show signs of depression?</column>
+            <column name="audiofile">sounds/depression.mp3</column>
+            <column name="symptom">depression</column>
+            <column name="use_table">table_non_urgent_ppr</column>
+            <column name="disease">PPR</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal appear to have a hard ball in its stomach?</column>
+            <column name="audiofile">sounds/hardBallInStomach.mp3</column>
+            <column name="symptom">hardBallInStomach</column>
+            <column name="use_table">table_non_urgent_plastic_bag</column>
+            <column name="disease">Plastic_bag</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+            <column name="audiofile">sounds/spasm.mp3</column>
+            <column name="symptom">spasm</column>
+            <column name="use_table">table_non_urgent_tetanus</column>
+            <column name="disease">Tetanus</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal shows signs of fatigue?</column>
+            <column name="audiofile">sounds/fatigue.mp3</column>
+            <column name="symptom">fatigue</column>
+            <column name="use_table">table_non_urgent_tickborne</column>
+            <column name="disease">Tickborne</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+            <column name="audiofile">sounds/recent_birth.mp3</column>
+            <column name="symptom">recent_birth</column>
+            <column name="use_table">table_non_urgent_brucellosis</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+            <column name="audiofile">sounds/swollenTesticles.mp3</column>
+            <column name="symptom">swollenTesticles</column>
+            <column name="use_table">table_non_urgent_brucellosis</column>
+            <column name="disease">Brucellosis</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">8</column>
+            <column name="question">Does your animal suffer from convulsions?</column>
+            <column name="audiofile">sounds/convulsions.mp3</column>
+            <column name="symptom">convulsions</column>
+            <column name="use_table">table_non_urgent_anthrax</column>
+            <column name="disease">Anthrax</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">9</column>
+            <column name="question">Does your animal isolate itself from the herd?</column>
+            <column name="audiofile">sounds/isolateFromHerd.mp3</column>
+            <column name="symptom">isolateFromHerd</column>
+            <column name="use_table">table_non_urgent_cbpp</column>
+            <column name="disease">CBPP</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">10</column>
+            <column name="question">Does your animal have a swelling on the thigh?</column>
+            <column name="audiofile">sounds/swellingThigh.mp3</column>
+            <column name="symptom">swellingThigh</column>
+            <column name="use_table">table_non_urgent_black_leg</column>
+            <column name="disease">Black_leg</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">11</column>
+            <column name="question">Does your animal have blisters on its feet?</column>
+            <column name="audiofile">sounds/blistersFeet.mp3</column>
+            <column name="symptom">blistersFeet</column>
+            <column name="use_table">table_non_urgent_foot_mouth</column>
+            <column name="disease">Foot-and-mouth</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animals sunken into the orbit?</column>
+            <column name="audiofile">sounds/eyesInOrbit.mp3</column>
+            <column name="symptom">eyesInOrbit</column>
+            <column name="use_table">table_non_urgent_dehydration</column>
+            <column name="disease">Dehydration</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+            <column name="audiofile">sounds/extremelyThin.mp3</column>
+            <column name="symptom">extremelyThin</column>
+            <column name="use_table">table_non_urgent_bovine_tuberculosis</column>
+            <column name="disease">Bovine_tuberculosis</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+            <column name="audiofile">sounds/dropHead.mp3</column>
+            <column name="symptom">dropHead</column>
+            <column name="use_table">table_non_urgent_pneumonia</column>
+            <column name="disease">Pneumonia</column>
+        </table>
+        <table name="table_general_question">
+            <column name="id_general_question">15</column>
+            <column name="question">Does your animal suffer from seizures?</column>
+            <column name="audiofile">sounds/seizures.mp3</column>
+            <column name="symptom">seizures</column>
+            <column name="use_table">table_non_urgent_rabies</column>
+            <column name="disease">Rabies</column>
+        </table>
+        <!-- Tabel table_goat -->
+        <table name="table_goat">
+            <column name="id">1</column>
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal show signs of depression?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">2</column>
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal appear to have a hard ball in its stomach?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">3</column>
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">4</column>
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of fatigue?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">5</column>
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">6</column>
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">7</column>
+            <column name="id_general_question">11</column>
+            <column name="question">Does your animal have blisters on its feet?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">8</column>
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animal sunken into the orbit?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">9</column>
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+        </table>
+        <table name="table_goat">
+            <column name="id">10</column>
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+        </table>
+        <!-- Tabel table_non_urgent_anthrax -->
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">1</column>
+            <column name="question">Is your animal trembling more than usual?</column>
+            <column name="audiofile">sounds/trembling.mp3</column>
+            <column name="symptom">trembling</column>
+        </table>
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal have breathing difficulties?</column>
+            <column name="audiofile">sounds/difficultBreathing.mp3</column>
+            <column name="symptom">difficultBreathing</column>
+        </table>
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">3</column>
+            <column name="question">Did you observe blood coming out of the animal after its death?</column>
+            <column name="audiofile">sounds/bloodFromOpeningsAfterDeath.mp3</column>
+            <column name="symptom">bloodFromOpeningsAfterDeath</column>
+        </table>
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have a higher temperature than usual?</column>
+            <column name="audiofile">sounds/highTemperature.mp3</column>
+            <column name="symptom">highTemperature</column>
+        </table>
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">5</column>
+            <column name="question">Did your animal die suddenly?</column>
+            <column name="audiofile">sounds/suddenDeath.mp3</column>
+            <column name="symptom">suddenDeath</column>
+        </table>
+        <table name="table_non_urgent_anthrax">
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal collapse in the past couple of days?</column>
+            <column name="audiofile">sounds/collapse.mp3</column>
+            <column name="symptom">collapse</column>
+        </table>
+        <!-- Tabel table_non_urgent_black_leg -->
+        <table name="table_non_urgent_black_leg">
+            <column name="id_general_question">1</column>
+            <column name="question">Is your animal unwilling to move?</column>
+            <column name="audiofile">sounds/unwillingnessToMove.mp3</column>
+            <column name="symptom">unwillingnessToMove</column>
+        </table>
+        <table name="table_non_urgent_black_leg">
+            <column name="id_general_question">2</column>
+            <column name="question">Is your animal breathing more rapidly than usual?</column>
+            <column name="audiofile">sounds/rapidBreathing.mp3</column>
+            <column name="symptom">rapidBreathing</column>
+        </table>
+        <table name="table_non_urgent_black_leg">
+            <column name="id_general_question">3</column>
+            <column name="question">Do you observe signs of lameness in your animal?</column>
+            <column name="audiofile">sounds/lameness.mp3</column>
+            <column name="symptom">lameness</column>
+        </table>
+        <table name="table_non_urgent_black_leg">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <table name="table_non_urgent_black_leg">
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <!-- Tabel table_non_urgent_bovine_tuberculosis -->
+        <table name="table_non_urgent_bovine_tuberculosis">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have swollen lymph nodes?</column>
+            <column name="audiofile">sounds/swollenLymphNodes.mp3</column>
+            <column name="symptom">swollenLymphNodes</column>
+        </table>
+        <table name="table_non_urgent_bovine_tuberculosis">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal cough?</column>
+            <column name="audiofile">sounds/cough.mp3</column>
+            <column name="symptom">cough</column>
+        </table>
+        <table name="table_non_urgent_bovine_tuberculosis">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <table name="table_non_urgent_bovine_tuberculosis">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_brucellosis -->
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">1</column>
+            <column name="question">Did your animal have an abortion recently?</column>
+            <column name="audiofile">sounds/abortion.mp3</column>
+            <column name="symptom">abortion</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">2</column>
+            <column name="question">Did your animal give birth to a weak calf recently?</column>
+            <column name="audiofile">sounds/weakCalfBorn.mp3</column>
+            <column name="symptom">weakCalfBorn</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">3</column>
+            <column name="question">Did your animal give birth to a stillborn recently?</column>
+            <column name="audiofile">sounds/stillBorn.mp3</column>
+            <column name="symptom">stillBorn</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of nervousness?</column>
+            <column name="audiofile">sounds/nervousness.mp3</column>
+            <column name="symptom">nervousness</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">6</column>
+            <column name="question">Did you observe retention of the membranes after your animal gave birth?</column>
+            <column name="audiofile">sounds/retentionMembranes.mp3</column>
+            <column name="symptom">retentionMembranes</column>
+        </table>
+        <table name="table_non_urgent_brucellosis">
+            <column name="id_general_question">7</column>
+            <column name="question">Did you observe infection of the membranes after your animal gave birth?</column>
+            <column name="audiofile">sounds/infectionMembranes.mp3</column>
+            <column name="symptom">infectionMembranes</column>
+        </table>
+        <!-- Tabel table_non_urgent_cbpp -->
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have breathing difficulties?</column>
+            <column name="audiofile">sounds/difficultBreathing.mp3</column>
+            <column name="symptom">difficultBreathing</column>
+        </table>
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">2</column>
+            <column name="question">Do you observe a loss in condition in your animal?</column>
+            <column name="audiofile">sounds/lossCondition.mp3</column>
+            <column name="symptom">lossCondition</column>
+        </table>
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">4</column>
+            <column name="question">Is your animal unwilling to move?</column>
+            <column name="audiofile">sounds/unwillingnessToMove.mp3</column>
+            <column name="symptom">unwillingnessToMove</column>
+        </table>
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">5</column>
+            <column name="question">Is there snot coming out of the nose of your animal?</column>
+            <column name="audiofile">sounds/snot.mp3</column>
+            <column name="symptom">snot</column>
+        </table>
+        <table name="table_non_urgent_cbpp">
+            <column name="id_general_question">6</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_dehydration -->
+        <table name="table_non_urgent_dehydration">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal suffer from diarrhea?</column>
+            <column name="audiofile">sounds/diarrhea.mp3</column>
+            <column name="symptom">diarrhea</column>
+        </table>
+        <table name="table_non_urgent_dehydration">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal drink less water than usual?</column>
+            <column name="audiofile">sounds/drinksLittle.mp3</column>
+            <column name="symptom">drinksLittle</column>
+        </table>
+        <table name="table_non_urgent_dehydration">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal suffer from weight loss?</column>
+            <column name="audiofile">sounds/weightLoss.mp3</column>
+            <column name="symptom">weightLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_foot_mouth -->
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have quivering lips and a frothing mouth?</column>
+            <column name="audiofile">sounds/quiveringLipsAndFrothingMouth.mp3</column>
+            <column name="symptom">quiveringLipsAndFrothingMouth</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal have blisters on its teats?</column>
+            <column name="audiofile">sounds/blistersTeats.mp3</column>
+            <column name="symptom">blistersTeats</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal have blisters in its mouth?</column>
+            <column name="audiofile">sounds/blistersMouth.mp3</column>
+            <column name="symptom">blistersMouth</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from weight loss?</column>
+            <column name="audiofile">sounds/weightLoss.mp3</column>
+            <column name="symptom">weightLoss</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">5</column>
+            <column name="question">Do you observe signs of lameness in your animal?</column>
+            <column name="audiofile">sounds/lameness.mp3</column>
+            <column name="symptom">lameness</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">6</column>
+            <column name="question">Did you observe a drop in the milk production?</column>
+            <column name="audiofile">sounds/dropMilkProduction.mp3</column>
+            <column name="symptom">dropMilkProduction</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <table name="table_non_urgent_foot_mouth">
+            <column name="id_general_question">8</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_plastic_bag -->
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal appear bloated?</column>
+            <column name="audiofile">sounds/bloat.mp3</column>
+            <column name="symptom">bloat</column>
+        </table>
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal drink more water than usual?</column>
+            <column name="audiofile">sounds/drinkingLotsOfWater.mp3</column>
+            <column name="symptom">drinkingLotsOfWater</column>
+        </table>
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">3</column>
+            <column name="question">Do you observe a loss in condition in your animal?</column>
+            <column name="audiofile">sounds/lossCondition.mp3</column>
+            <column name="symptom">lossCondition</column>
+        </table>
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from diarrhea?</column>
+            <column name="audiofile">sounds/diarrhea.mp3</column>
+            <column name="symptom">diarrhea</column>
+        </table>
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of fatigue?</column>
+            <column name="audiofile">sounds/fatigue.mp3</column>
+            <column name="symptom">fatigue</column>
+        </table>
+        <table name="table_non_urgent_plastic_bag">
+            <column name="id_general_question">6</column>
+            <column name="question">Does your animal suffer from weight loss?</column>
+            <column name="audiofile">sounds/weightLoss.mp3</column>
+            <column name="symptom">weightLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_pneumonia -->
+        <table name="table_non_urgent_pneumonia">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal cough?</column>
+            <column name="audiofile">sounds/cough.mp3</column>
+            <column name="symptom">cough</column>
+        </table>
+        <table name="table_non_urgent_pneumonia">
+            <column name="id_general_question">2</column>
+            <column name="question">Is there snot coming out of the nose of your animal?</column>
+            <column name="audiofile">sounds/snot.mp3</column>
+            <column name="symptom">snot</column>
+        </table>
+        <table name="table_non_urgent_pneumonia">
+            <column name="id_general_question">3</column>
+            <column name="question">Is your animal breathing more rapidly than usual?</column>
+            <column name="audiofile">sounds/rapidBreathing.mp3</column>
+            <column name="symptom">rapidBreathing</column>
+        </table>
+        <table name="table_non_urgent_pneumonia">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_ppr -->
+        <table name="table_non_urgent_ppr">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have blisters in its mouth?</column>
+            <column name="audiofile">sounds/blistersMouth.mp3</column>
+            <column name="symptom">blistersMouth</column>
+        </table>
+        <table name="table_non_urgent_ppr">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal suffer from diarrhea?</column>
+            <column name="audiofile">sounds/diarrhea.mp3</column>
+            <column name="symptom">diarrhea</column>
+        </table>
+        <table name="table_non_urgent_ppr">
+            <column name="id_general_question">3</column>
+            <column name="question">Is there snot coming out of the nose of your animal?</column>
+            <column name="audiofile">sounds/snot.mp3</column>
+            <column name="symptom">snot</column>
+        </table>
+        <table name="table_non_urgent_ppr">
+            <column name="id_general_question">4</column>
+            <column name="question">Did your animal die suddenly?</column>
+            <column name="audiofile">sounds/suddenDeath.mp3</column>
+            <column name="symptom">suddenDeath</column>
+        </table>
+        <!-- Tabel table_non_urgent_rabies -->
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have swallowing difficulties?</column>
+            <column name="audiofile">sounds/difficultSwallowing.mp3</column>
+            <column name="symptom">difficultSwallowing</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal have an altered voice?</column>
+            <column name="audiofile">sounds/alteredVocalisation.mp3</column>
+            <column name="symptom">alteredVocalisation</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal show aggressive behavior?</column>
+            <column name="audiofile">sounds/aggressive.mp3</column>
+            <column name="symptom">aggressive</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal make exaggerated movements?</column>
+            <column name="audiofile">sounds/exaggeratedMovements.mp3</column>
+            <column name="symptom">exaggeratedMovements</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show an increase in sexual activities?</column>
+            <column name="audiofile">sounds/increaseSexualActivity.mp3</column>
+            <column name="symptom">increaseSexualActivity</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">6</column>
+            <column name="question">Did you observe a drop in the milk production?</column>
+            <column name="audiofile">sounds/dropMilkProduction.mp3</column>
+            <column name="symptom">dropMilkProduction</column>
+        </table>
+        <table name="table_non_urgent_rabies">
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <!-- Tabel table_non_urgent_tetanus -->
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">1</column>
+            <column name="question">Are the muscles of the animal twitching?</column>
+            <column name="audiofile">sounds/twitchingMuscles.mp3</column>
+            <column name="symptom">twitchingMuscles</column>
+        </table>
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">2</column>
+            <column name="question">Do you observe signs of stiffness in your animal?</column>
+            <column name="audiofile">sounds/stiffness.mp3</column>
+            <column name="symptom">stiffness</column>
+        </table>
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">3</column>
+            <column name="question">Do you observe a pink mass in the eye of your animal?</column>
+            <column name="audiofile">sounds/pinkMassEye.mp3</column>
+            <column name="symptom">pinkMassEye</column>
+        </table>
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal have one or multiple wounds?</column>
+            <column name="audiofile">sounds/wound.mp3</column>
+            <column name="symptom">wound</column>
+        </table>
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">5</column>
+            <column name="question">Do you observe that your animal is anxious and easily excited?</column>
+            <column name="audiofile">sounds/anxiousAndEasilyExcited.mp3</column>
+            <column name="symptom">anxiousAndEasilyExcited</column>
+        </table>
+        <table name="table_non_urgent_tetanus">
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal collapse in the past couple of days?</column>
+            <column name="audiofile">sounds/collapse.mp3</column>
+            <column name="symptom">collapse</column>
+        </table>
+        <!-- Tabel table_non_urgent_tickborne -->
+        <table name="table_non_urgent_tickborne">
+            <column name="id_general_question">1</column>
+            <column name="question">Does your animal have a fever?</column>
+            <column name="audiofile">sounds/fever.mp3</column>
+            <column name="symptom">fever</column>
+        </table>
+        <table name="table_non_urgent_tickborne">
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal have loss of appetite?</column>
+            <column name="audiofile">sounds/appetiteLoss.mp3</column>
+            <column name="symptom">appetiteLoss</column>
+        </table>
+        <table name="table_non_urgent_tickborne">
+            <column name="id_general_question">3</column>
+            <column name="question">Did your animal have an abortion recently?</column>
+            <column name="audiofile">sounds/abortion.mp3</column>
+            <column name="symptom">abortion</column>
+        </table>
+        <!-- Tabel table_pig -->
+        <table name="table_pig">
+            <column name="id">1</column>
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">2</column>
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of fatigue?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">3</column>
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">4</column>
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">5</column>
+            <column name="id_general_question">8</column>
+            <column name="question">Does your animal suffer from convulsions?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">6</column>
+            <column name="id_general_question">11</column>
+            <column name="question">Does your animal have blisters on its feet?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">7</column>
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animal sunken into the orbit?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">8</column>
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+        </table>
+        <table name="table_pig">
+            <column name="id">9</column>
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+        </table>
+        <!-- Tabel table_sheep -->
+        <table name="table_sheep">
+            <column name="id">1</column>
+            <column name="id_general_question">2</column>
+            <column name="question">Does your animal show signs of depression?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">2</column>
+            <column name="id_general_question">3</column>
+            <column name="question">Does your animal appear to have a hard ball in its stomach?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">3</column>
+            <column name="id_general_question">4</column>
+            <column name="question">Does your animal suffer from spasms?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">4</column>
+            <column name="id_general_question">5</column>
+            <column name="question">Does your animal show signs of fatigue?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">5</column>
+            <column name="id_general_question">6</column>
+            <column name="question">Did your animal give birth recently?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">6</column>
+            <column name="id_general_question">7</column>
+            <column name="question">Does your animal have swollen testicles?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">7</column>
+            <column name="id_general_question">8</column>
+            <column name="question">Does your animal suffer from convulsions?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">8</column>
+            <column name="id_general_question">10</column>
+            <column name="question">Does your animal have a swelling on the thigh?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">9</column>
+            <column name="id_general_question">11</column>
+            <column name="question">Does your animal have blisters on its feet?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">10</column>
+            <column name="id_general_question">12</column>
+            <column name="question">Are the eyes of your animal sunken into the orbit?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">11</column>
+            <column name="id_general_question">13</column>
+            <column name="question">Is your animal extremely thin?</column>
+        </table>
+        <table name="table_sheep">
+            <column name="id">12</column>
+            <column name="id_general_question">14</column>
+            <column name="question">Does your animal drop its head?</column>
+        </table>
+        <!-- Tabel variables_diseases -->
+        <table name="variables_diseases">
+            <column name="PPR_disease">0</column>
+            <column name="Plastic_bags_disease">0</column>
+            <column name="Tetanus_disease">0</column>
+            <column name="Tickborne_disease">0</column>
+            <column name="Brucellosis_disease">0</column>
+            <column name="Anthrax_disease">0</column>
+            <column name="CBPP_disease">0</column>
+            <column name="Black_leg_disease">0</column>
+            <column name="Foot_and_mouth_disease">0</column>
+            <column name="Rabies_disease">0</column>
+            <column name="Dehydration">0</column>
+            <column name="Pneumonia">0</column>
+            <column name="BovineTuberculosis">0</column>
+        </table>
+        <!-- Tabel variables_general -->
+        <table name="variables_general">
+            <column name="question_id">1</column>
+            <column name="general_id">1</column>
+            <column name="use_table">table_cow</column>
+            <column name="kind_of_animal">cow</column>
+            <column name="urgent">0</column>
+            <column name="notUrgent">0</column>
+            <column name="decision">0</column>
+            <column name="id">1</column>
+            <column name="first">1</column>
+        </table>
+        <!-- Tabel variables_not_urgent -->
+        <table name="variables_not_urgent">
+            <column name="wound">0</column>
+            <column name="dropMilkProduction">0</column>
+            <column name="rapidBreathing">0</column>
+            <column name="lossCondition">0</column>
+            <column name="trembling">0</column>
+            <column name="swellingThigh">0</column>
+            <column name="convulsions">0</column>
+            <column name="abortion">0</column>
+            <column name="stillborn">0</column>
+            <column name="weakCalfBorn">0</column>
+            <column name="retentionMembranes">0</column>
+            <column name="fatigue">0</column>
+            <column name="twitchingMuscles">0</column>
+            <column name="anxiousAndEasilyExcited">0</column>
+            <column name="bloat">0</column>
+            <column name="diarrhea">0</column>
+            <column name="drinkingLotsOfWater">0</column>
+            <column name="insects">0</column>
+            <column name="notEnoughFood">0</column>
+            <column name="drinksLitte">0</column>
+            <column name="swollenLymphNodes">0</column>
+            <column name="alteredVocalisation">0</column>
+            <column name="exaggeratedMovements">0</column>
+            <column name="increaseSexualActivity">0</column>
+            <column name="depression">0</column>
+        </table>
+        <!-- Tabel variables_urgent -->
+        <table name="variables_urgent">
+            <column name="fever">0</column>
+            <column name="highTemperature">0</column>
+            <column name="eyesInOrbid">0</column>
+            <column name="extremelyThin">0</column>
+            <column name="dropHead">0</column>
+            <column name="isolatedFromHerd">0</column>
+            <column name="weightLoss">0</column>
+            <column name="unwillingnessToMove">0</column>
+            <column name="appetiteLoss">0</column>
+            <column name="quiveringLipsAndFrothingMouth">0</column>
+            <column name="blistersTeath">0</column>
+            <column name="lameness">0</column>
+            <column name="difficultBreathing">0</column>
+            <column name="suddenDeath">0</column>
+            <column name="bloodFromOpeningsAfterDeath">0</column>
+            <column name="collapse">0</column>
+            <column name="infectionMembranes">0</column>
+            <column name="swollenTesticles">0</column>
+            <column name="protrudingEyelid">0</column>
+            <column name="spasm">0</column>
+            <column name="hardBallInStomach">0</column>
+            <column name="cough">0</column>
+            <column name="snot">0</column>
+            <column name="aggressive">0</column>
+            <column name="weirdNoises">0</column>
+            <column name="limping">0</column>
+            <column name="bleeding">0</column>
+            <column name="difficultSwallowing">0</column>
+            <column name="blistersMouth">0</column>
+            <column name="blistersFeet">0</column>
+            <column name="seizures">0</column>
+            <column name="pinkMassEye">0</column>
+        </table>
+    </database>
+</pma_xml_export>
