@@ -22,21 +22,30 @@ dv:Cow
 dv:Sheep
 	a rdfs:Class ;
 	rdfs:subClassOf  dv:Animal ;
+	dv:canCarryDisease dv:ppr, dv:plastic_bag , dv:tetanus , dv:tickborne , 
+		dv:brucellosis , dv:anthrax ,  dv:black_leg ,
+		dv:foot_mouth , dv:dehydration , dv:bovine_tuberculosis , dv:pneumonia ;
 	rdfs:label "Sheep"@en .
 
 dv:Goat
 	a rdfs:Class ;
 	rdfs:subClassOf dv:Animal ;
+	dv:canCarryDisease dv:ppr, dv:plastic_bag , dv:tetanus , dv:tickborne , 
+		dv:brucellosis , dv:foot_mouth , dv:dehydration , dv:bovine_tuberculosis , dv:pneumonia ;
 	rdfs:label "Goat"@en .		
 	
 dv:Pig 
 	a rdfs:Class ;
 	rdfs:subClassOf dv:Animal ;
+	dv:canCarryDisease dv:tetanus, dv:tickborne , 
+		dv:brucellosis , dv:anthrax ,  dv:foot_mouth , dv:dehydration , dv:bovine_tuberculosis , dv:pneumonia ;
 	rdfs:label "Pig"@en .
 	
 dv:Dog
 	a rdfs:Class ;
 	rdfs:subClassOf dv:Animal ;
+	dv:canCarryDisease dv:tetanus, dv:tickborne , 
+		dv:brucellosis , dv:rabies , dv:dehydration , dv:bovine_tuberculosis , dv:pneumonia ;
 	rdfs:label "Dog"@en .
 	
 	
@@ -104,10 +113,338 @@ dv:rabies
 
 # ---- symptom ---
 	
-dv:depression 
+dv:depression
 	a dv:Symptom;
-	dv:has_disease dv:PPR; # soms in xml tag, soms in naam tabel
-	rdfs:label "Depression".
+	rdfs:label	"depression"
+	dv:symptom_for_disease dv:PPR	.
+dv:hardBallInStomach
+	a dv:Symptom;
+	rdfs:label	"hardBallInStomach"
+	dv:symptom_for_disease dv:Plastic_bag	.
+dv:spasm
+	a dv:Symptom;
+	rdfs:label	"spasm"
+	dv:symptom_for_disease dv:Tetanus	.
+dv:fatigue
+	a dv:Symptom;
+	rdfs:label	"fatigue"
+	dv:symptom_for_disease dv:Tickborne	.
+dv:recent_birth
+	a dv:Symptom;
+	rdfs:label	"recent_birth"
+	dv:symptom_for_disease dv:Brucellosis	.
+dv:swollenTesticles
+	a dv:Symptom;
+	rdfs:label	"swollenTesticles"
+	dv:symptom_for_disease dv:Brucellosis	.
+dv:convulsions
+	a dv:Symptom;
+	rdfs:label	"convulsions"
+	dv:symptom_for_disease dv:Anthrax	.
+dv:isolateFromHerd
+	a dv:Symptom;
+	rdfs:label	"isolateFromHerd"
+	dv:symptom_for_disease dv:CBPP	.
+dv:swellingThigh
+	a dv:Symptom;
+	rdfs:label	"swellingThigh"
+	dv:symptom_for_disease dv:Black_leg	.
+dv:blistersFeet
+	a dv:Symptom;
+	rdfs:label	"blistersFeet"
+	dv:symptom_for_disease dv:Foot-and-mouth	.
+dv:eyesInOrbit
+	a dv:Symptom;
+	rdfs:label	"eyesInOrbit"
+	dv:symptom_for_disease dv:Dehydration	.
+dv:extremelyThin
+	a dv:Symptom;
+	rdfs:label	"extremelyThin"
+	dv:symptom_for_disease dv:Bovine_tuberculosis	.
+dv:dropHead
+	a dv:Symptom;
+	rdfs:label	"dropHead"
+	dv:symptom_for_disease dv:Pneumonia	.
+dv:seizures
+	a dv:Symptom;
+	rdfs:label	"seizures"
+	dv:symptom_for_disease dv:Rabies	.
+dv:trembling
+	a dv:Symptom;
+	rdfs:label	"trembling"
+	dv:symptom_for_disease dv:anthrax	.
+dv:difficultBreathing
+	a dv:Symptom;
+	rdfs:label	"difficultBreathing"
+	dv:symptom_for_disease dv:anthrax	.
+dv:bloodFromOpeningsAfterDeath
+	a dv:Symptom;
+	rdfs:label	"bloodFromOpeningsAfterDeath"
+	dv:symptom_for_disease dv:anthrax	.
+dv:highTemperature
+	a dv:Symptom;
+	rdfs:label	"highTemperature"
+	dv:symptom_for_disease dv:anthrax	.
+dv:suddenDeath
+	a dv:Symptom;
+	rdfs:label	"suddenDeath"
+	dv:symptom_for_disease dv:anthrax	.
+dv:collapse
+	a dv:Symptom;
+	rdfs:label	"collapse"
+	dv:symptom_for_disease dv:anthrax	.
+dv:unwillingnessToMove
+	a dv:Symptom;
+	rdfs:label	"unwillingnessToMove"
+	dv:symptom_for_disease dv:black_leg	.
+dv:rapidBreathing
+	a dv:Symptom;
+	rdfs:label	"rapidBreathing"
+	dv:symptom_for_disease dv:black_leg	.
+dv:lameness
+	a dv:Symptom;
+	rdfs:label	"lameness"
+	dv:symptom_for_disease dv:black_leg	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:black_leg	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:black_leg	.
+dv:cough
+	a dv:Symptom;
+	rdfs:label	"cough"
+	dv:symptom_for_disease dv:tuberculosis	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:tuberculosis	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:tuberculosis	.
+dv:abortion
+	a dv:Symptom;
+	rdfs:label	"abortion"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:weakCalfBorn
+	a dv:Symptom;
+	rdfs:label	"weakCalfBorn"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:stillBorn
+	a dv:Symptom;
+	rdfs:label	"stillBorn"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:nervousness
+	a dv:Symptom;
+	rdfs:label	"nervousness"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:retentionMembranes
+	a dv:Symptom;
+	rdfs:label	"retentionMembranes"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:infectionMembranes
+	a dv:Symptom;
+	rdfs:label	"infectionMembranes"
+	dv:symptom_for_disease dv:brucellosis	.
+dv:difficultBreathing
+	a dv:Symptom;
+	rdfs:label	"difficultBreathing"
+	dv:symptom_for_disease dv:cbpp	.
+dv:lossCondition
+	a dv:Symptom;
+	rdfs:label	"lossCondition"
+	dv:symptom_for_disease dv:cbpp	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:cbpp	.
+dv:unwillingnessToMove
+	a dv:Symptom;
+	rdfs:label	"unwillingnessToMove"
+	dv:symptom_for_disease dv:cbpp	.
+dv:snot
+	a dv:Symptom;
+	rdfs:label	"snot"
+	dv:symptom_for_disease dv:cbpp	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:cbpp	.
+dv:diarrhea
+	a dv:Symptom;
+	rdfs:label	"diarrhea"
+	dv:symptom_for_disease dv:dehydration	.
+dv:drinksLittle
+	a dv:Symptom;
+	rdfs:label	"drinksLittle"
+	dv:symptom_for_disease dv:dehydration	.
+dv:weightLoss
+	a dv:Symptom;
+	rdfs:label	"weightLoss"
+	dv:symptom_for_disease dv:dehydration	.
+dv:quiveringLipsAndFrothingMouth
+	a dv:Symptom;
+	rdfs:label	"quiveringLipsAndFrothingMouth"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:blistersTeats
+	a dv:Symptom;
+	rdfs:label	"blistersTeats"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:blistersMouth
+	a dv:Symptom;
+	rdfs:label	"blistersMouth"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:weightLoss
+	a dv:Symptom;
+	rdfs:label	"weightLoss"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:lameness
+	a dv:Symptom;
+	rdfs:label	"lameness"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:dropMilkProduction
+	a dv:Symptom;
+	rdfs:label	"dropMilkProduction"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:foot_mouth	.
+dv:bloat
+	a dv:Symptom;
+	rdfs:label	"bloat"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:drinkingLotsOfWater
+	a dv:Symptom;
+	rdfs:label	"drinkingLotsOfWater"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:lossCondition
+	a dv:Symptom;
+	rdfs:label	"lossCondition"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:diarrhea
+	a dv:Symptom;
+	rdfs:label	"diarrhea"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:fatigue
+	a dv:Symptom;
+	rdfs:label	"fatigue"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:weightLoss
+	a dv:Symptom;
+	rdfs:label	"weightLoss"
+	dv:symptom_for_disease dv:plastic_bag	.
+dv:cough
+	a dv:Symptom;
+	rdfs:label	"cough"
+	dv:symptom_for_disease dv:pneumonia	.
+dv:snot
+	a dv:Symptom;
+	rdfs:label	"snot"
+	dv:symptom_for_disease dv:pneumonia	.
+dv:rapidBreathing
+	a dv:Symptom;
+	rdfs:label	"rapidBreathing"
+	dv:symptom_for_disease dv:pneumonia	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:pneumonia	.
+dv:blistersMouth
+	a dv:Symptom;
+	rdfs:label	"blistersMouth"
+	dv:symptom_for_disease dv:ppr	.
+dv:diarrhea
+	a dv:Symptom;
+	rdfs:label	"diarrhea"
+	dv:symptom_for_disease dv:ppr	.
+dv:snot
+	a dv:Symptom;
+	rdfs:label	"snot"
+	dv:symptom_for_disease dv:ppr	.
+dv:suddenDeath
+	a dv:Symptom;
+	rdfs:label	"suddenDeath"
+	dv:symptom_for_disease dv:ppr	.
+dv:difficultSwallowing
+	a dv:Symptom;
+	rdfs:label	"difficultSwallowing"
+	dv:symptom_for_disease dv:rabies	.
+dv:alteredVocalisation
+	a dv:Symptom;
+	rdfs:label	"alteredVocalisation"
+	dv:symptom_for_disease dv:rabies	.
+dv:aggressive
+	a dv:Symptom;
+	rdfs:label	"aggressive"
+	dv:symptom_for_disease dv:rabies	.
+dv:exaggeratedMovements
+	a dv:Symptom;
+	rdfs:label	"exaggeratedMovements"
+	dv:symptom_for_disease dv:rabies	.
+dv:increaseSexualActivity
+	a dv:Symptom;
+	rdfs:label	"increaseSexualActivity"
+	dv:symptom_for_disease dv:rabies	.
+dv:dropMilkProduction
+	a dv:Symptom;
+	rdfs:label	"dropMilkProduction"
+	dv:symptom_for_disease dv:rabies	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:rabies	.
+dv:twitchingMuscles
+	a dv:Symptom;
+	rdfs:label	"twitchingMuscles"
+	dv:symptom_for_disease dv:tetanus	.
+dv:stiffness
+	a dv:Symptom;
+	rdfs:label	"stiffness"
+	dv:symptom_for_disease dv:tetanus	.
+dv:pinkMassEye
+	a dv:Symptom;
+	rdfs:label	"pinkMassEye"
+	dv:symptom_for_disease dv:tetanus	.
+dv:wound
+	a dv:Symptom;
+	rdfs:label	"wound"
+	dv:symptom_for_disease dv:tetanus	.
+dv:anxiousAndEasilyExcited
+	a dv:Symptom;
+	rdfs:label	"anxiousAndEasilyExcited"
+	dv:symptom_for_disease dv:tetanus	.
+dv:collapse
+	a dv:Symptom;
+	rdfs:label	"collapse"
+	dv:symptom_for_disease dv:tetanus	.
+dv:fever
+	a dv:Symptom;
+	rdfs:label	"fever"
+	dv:symptom_for_disease dv:tickborne	.
+dv:appetiteLoss
+	a dv:Symptom;
+	rdfs:label	"appetiteLoss"
+	dv:symptom_for_disease dv:tickborne	.
+dv:abortion
+	a dv:Symptom;
+	rdfs:label	"abortion"
+	dv:symptom_for_disease dv:tickborne	.
+dv:swollenLymphNodes
+	a dv:Symptom;
+	rdfs:label	"swollenLymphNodes"
+	dv:symptom_for_disease dv:tuberculosis	.
 		
 # ---- questions ---
 
