@@ -14,17 +14,9 @@ dv:Animal
 dv:Cow 
 	a rdfs:Class ;
 	rdfs:subClassOf dv:Animal ;
-	dv:canCarryDisease dv:Plastic_bag ;
-	dv:canCarryDisease dv:Tetanus ;
-	dv:canCarryDisease dv:Tickborne ;
-	dv:canCarryDisease dv:Brucellosis ;
-	dv:canCarryDisease dv:Anthrax ;
-	dv:canCarryDisease dv:CBPP ;
-	dv:canCarryDisease dv:Black_leg ;
-	dv:canCarryDisease dv:Foot-and-mouth ;
-	dv:canCarryDisease dv:Dehydration ;
-	dv:canCarryDisease dv:Bovine_tuberculosis ;
-	dv:canCarryDisease dv:Pneumonia ;
+	dv:canCarryDisease dv:plastic_bag , dv:tetanus , dv:tickborne , 
+		dv:brucellosis , dv:anthrax , dv:cbpp , dv:black_leg ,
+		dv:foot_mouth , dv:dehydration , dv:bovine_tuberculosis , dv:pneumonia ;
 	rdfs:label "Cow"@en .
 	
 dv:Sheep
@@ -47,65 +39,66 @@ dv:Dog
 	rdfs:subClassOf dv:Animal ;
 	rdfs:label "Dog"@en .
 	
+	
 # --- DISEASES ----
 
-dv:Disease	
+dv:disease	
 	a rdfs:Class ; 
 	rdfs:label "Disease"@en .
 	
-dv:Plastic_bag	
+dv:plastic_bag	
 	a dv:Disease;
 	rdfs:label "Plastic Bag"@en .
 	 
-dv:Tetanus		
+dv:tetanus		
 	a dv:Disease;
 	rdfs:label "Tetanus"@en .
 	 	
-dv:Tickborne	
+dv:tickborne	
 	a dv:Disease;
 	rdfs:label "Tickborne"@en .
 	 	
-dv:Brucellosis_m	
+dv:brucellosis_m	
 	a dv:Disease;
 	rdfs:label "Brucellosis_m"@en .
 	 
-dv:Brucellosis_v	
+dv:brucellosis_v	
 	a dv:Disease;
 	rdfs:label "Brucellosis_v"@en .
 	 
-dv:Anthrax	
+dv:anthrax	
 	a dv:Disease;
 	rdfs:label "Anthrax"@en .
 	 
-dv:CBPP	
+dv:cbpp	
 	a dv:Disease;
 	rdfs:label "CBPP"@en .
 	 
-dv:Black_leg		
+dv:black_leg		
 	a dv:Disease;
 	rdfs:label "Black_leg"@en .
 	 	
-dv:Foot-and-mouth	
+dv:foot_mouth	
 	a dv:Disease;
 	rdfs:label "Foot-and-mouth"@en .
 	 
-dv:Dehydration	
+dv:dehydration	
 	a dv:Disease;
 	rdfs:label "Dehydration"@en .
 	 
-dv:Bovine_tuberculosis	
+dv:bovine_tuberculosis	
 	a dv:Disease;
 	rdfs:label "Bovine_tuberculosis"@en .
 	 
-dv:Pneumonia 	
+dv:pneumonia 	
 	a dv:Disease;
 	rdfs:label "Pneumonia"@en .
 	 
-dv:PPR	
+dv:ppr	
 	a dv:Disease;
 	rdfs:label "PPR"@en .
 	 
-dv:Rabies	
+dv:rabies	
 	a dv:Disease;
 	rdfs:label "Rabies"@en .
 
@@ -118,15 +111,797 @@ dv:depression
 		
 # ---- questions ---
 
-dv:question_general_2 
+# from animal tables
+dv:question_pig_1 
 	a dv:Question ;
-	rdfs:label "Does your animal show signs of depression?";
-	dv:audiofile "sounds/depression.mp3";
-	dv:has_symptom dv:depression;
-	dv:use_table "table_non_urgent_ppr".
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "4" ;
+	rdfs:label "Does your animal suffer from spasms?" ;
+	dv:question_for_animal dv:Pig, dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+	
+dv:question_pig_2
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "5" ;
+	rdfs:label "Does your animal show signs of fatigue?" ;
+	dv:question_for_animal dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_pig_3
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "6" ;
+	rdfs:label "Did your animal give birth recently?" ;
+	dv:question_for_animal dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_pig_4
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "7" ;
+	rdfs:label "Does your animal have swollen testicles?" ;
+	dv:question_for_animal dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_pig_5
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "8" ;
+	rdfs:label "Does your animal suffer from convulsions?" ;
+	dv:question_for_animal dv:Pig, dv:Sheep, dv:Cow.
+
+dv:question_pig_6
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "11" ;
+	rdfs:label "Does your animal have blisters on its feet?" ;
+	dv:question_for_animal dv:Pig , dv:Sheep, dv:Cow, dv:Goat.
+
+dv:question_pig_7
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "12" ;
+	rdfs:label "Are the eyes of your animal sunken into the orbit?" ;
+	dv:question_for_animal dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_pig_8
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "13" ;
+	rdfs:label "Is your animal extremely thin?" ;
+	dv:question_for_animal  dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_pig_9
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "14" ;
+	rdfs:label "Does your animal drop its head?" ;
+	dv:question_for_animal  dv:Pig , dv:Sheep, dv:Cow, dv:Dog, dv:Goat  .
+
+dv:question_sheep_1
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "2" ;
+	rdfs:label "Does your animal show signs of depression?" ;
+	dv:question_for_animal dv:Sheep , dv:Goat .
+
+dv:question_sheep_2
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ;
+	dv:id_general_question "3" ;
+	rdfs:label "Does your animal appear to have a hard ball in its stomach?" ;
+	dv:question_for_animal dv:Sheep , dv:Cow , dv:Goat.
+
+dv:question_sheep_8
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ; 
+	dv:id_general_question "10" ;
+	rdfs:label "Does your animal have a swelling on the thigh?" ;
+	dv:question_for_animal dv:Sheep , dv:Cow.
+
+dv:question_cow_7
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ; 
+	dv:id_general_question "9" ;
+	rdfs:label "Does your animal isolate itself from the herd?" ;
+	dv:question_for_animal dv:Cow .
+
+dv:question_dog_8
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ; 
+	dv:id_general_question "15" ;
+	rdfs:label "Does your animal suffer from seizures?" ;
+	dv:question_for_animal dv:Dog .
+
+dv:question_goat_4
+	a dv:Question ; 
+	dv:questionType dv:AnimalQuestionType ; 
+	dv:id_general_question "5" ;
+	rdfs:label "Does your animal show signs of fatigue?" ;
+	dv:question_for_animal dv:Goat .
+
+	
+# GENERAL QUESTIONs
+
+dv:question_general_1
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "What kind of animal do you have?" ;
+	dv:audiofile "sounds/animal_type.mp3" .
+
+dv:question_general_2
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal show signs of depression?" ;
+	dv:audiofile "sounds/depression.mp3" ;
+	dv:question_for_symptom dv:depression ;
+	dv:use_table "table_non_urgent_ppr" ;
+	dv:question_for_disease dv:PPR .
+
+dv:question_general_3
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal appear to have a hard ball in its stomach?" ;
+	dv:audiofile "sounds/hardBallInStomach.mp3" ;
+	dv:question_for_symptom dv:hardBallInStomach ;
+	dv:use_table "table_non_urgent_plastic_bag" ;
+	dv:question_for_disease dv:Plastic_bag .
+
+dv:question_general_4
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal suffer from spasms?" ;
+	dv:audiofile "sounds/spasm.mp3" ;
+	dv:question_for_symptom dv:spasm ;
+	dv:use_table "table_non_urgent_tetanus" ;
+	dv:question_for_disease dv:Tetanus .
+
+dv:question_general_5
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal shows signs of fatigue?" ;
+	dv:audiofile "sounds/fatigue.mp3" ;
+	dv:question_for_symptom dv:fatigue ;
+	dv:use_table "table_non_urgent_tickborne" ;
+	dv:question_for_disease dv:Tickborne .
+
+dv:question_general_6
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Did your animal give birth recently?" ;
+	dv:audiofile "sounds/recent_birth.mp3" ;
+	dv:question_for_symptom dv:recent_birth ;
+	dv:use_table "table_non_urgent_brucellosis" ;
+	dv:question_for_disease dv:Brucellosis .
+
+dv:question_general_7
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal have swollen testicles?" ;
+	dv:audiofile "sounds/swollenTesticles.mp3" ;
+	dv:question_for_symptom dv:swollenTesticles ;
+	dv:use_table "table_non_urgent_brucellosis" ;
+	dv:question_for_disease dv:Brucellosis .
+
+dv:question_general_8
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal suffer from convulsions?" ;
+	dv:audiofile "sounds/convulsions.mp3" ;
+	dv:question_for_symptom dv:convulsions ;
+	dv:use_table "table_non_urgent_anthrax" ;
+	dv:question_for_disease dv:Anthrax .
+
+dv:question_general_9
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal isolate itself from the herd?" ;
+	dv:audiofile "sounds/isolateFromHerd.mp3" ;
+	dv:question_for_symptom dv:isolateFromHerd ;
+	dv:use_table "table_non_urgent_cbpp" ;
+	dv:question_for_disease dv:CBPP .
+
+dv:question_general_10
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal have a swelling on the thigh?" ;
+	dv:audiofile "sounds/swellingThigh.mp3" ;
+	dv:question_for_symptom dv:swellingThigh ;
+	dv:use_table "table_non_urgent_black_leg" ;
+	dv:question_for_disease dv:Black_leg .
+
+dv:question_general_11
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal have blisters on its feet?" ;
+	dv:audiofile "sounds/blistersFeet.mp3" ;
+	dv:question_for_symptom dv:blistersFeet ;
+	dv:use_table "table_non_urgent_foot_mouth" ;
+	dv:question_for_disease dv:Foot-and-mouth .
+
+dv:question_general_12
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Are the eyes of your animals sunken into the orbit?" ;
+	dv:audiofile "sounds/eyesInOrbit.mp3" ;
+	dv:question_for_symptom dv:eyesInOrbit ;
+	dv:use_table "table_non_urgent_dehydration" ;
+	dv:question_for_disease dv:Dehydration .
+
+dv:question_general_13
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Is your animal extremely thin?" ;
+	dv:audiofile "sounds/extremelyThin.mp3" ;
+	dv:question_for_symptom dv:extremelyThin ;
+	dv:use_table "table_non_urgent_bovine_tuberculosis" ;
+	dv:question_for_disease dv:Bovine_tuberculosis .
+
+dv:question_general_14
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal drop its head?" ;
+	dv:audiofile "sounds/dropHead.mp3" ;
+	dv:question_for_symptom dv:dropHead ;
+	dv:use_table "table_non_urgent_pneumonia" ;
+	dv:question_for_disease dv:Pneumonia .
+
+dv:question_general_15
+	a dv:Question ;
+	dv:questionType dv:GeneralQuestionType;
+	rdfs:label "Does your animal suffer from seizures?" ;
+	dv:audiofile "sounds/seizures.mp3" ;
+	dv:question_for_symptom dv:seizures ;
+	dv:use_table "table_non_urgent_rabies" ;
+	dv:question_for_disease dv:Rabies .
 	
 	
-		
-		
-		
-		
+# ---- SymptomQuestions
+	dv:question_non_urgent_anthrax_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is your animal trembling more than usual?" ;
+	dv:audiofile "sounds/trembling.mp3" ;
+	dv:question_for_symptom dv:trembling ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_anthrax_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have breathing difficulties?" ;
+	dv:audiofile "sounds/difficultBreathing.mp3" ;
+	dv:question_for_symptom dv:difficultBreathing ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_anthrax_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did you observe blood coming out of the animal after its death?" ;
+	dv:audiofile "sounds/bloodFromOpeningsAfterDeath.mp3" ;
+	dv:question_for_symptom dv:bloodFromOpeningsAfterDeath ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_anthrax_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a higher temperature than usual?" ;
+	dv:audiofile "sounds/highTemperature.mp3" ;
+	dv:question_for_symptom dv:highTemperature ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_anthrax_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal die suddenly?" ;
+	dv:audiofile "sounds/suddenDeath.mp3" ;
+	dv:question_for_symptom dv:suddenDeath ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_anthrax_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal collapse in the past couple of days?" ;
+	dv:audiofile "sounds/collapse.mp3" ;
+	dv:question_for_symptom dv:collapse ;
+	dv:question_for_disease dv:anthrax.
+
+dv:question_non_urgent_black_leg_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is your animal unwilling to move?" ;
+	dv:audiofile "sounds/unwillingnessToMove.mp3" ;
+	dv:question_for_symptom dv:unwillingnessToMove ;
+	dv:question_for_disease dv:black_leg.
+
+dv:question_non_urgent_black_leg_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is your animal breathing more rapidly than usual?" ;
+	dv:audiofile "sounds/rapidBreathing.mp3" ;
+	dv:question_for_symptom dv:rapidBreathing ;
+	dv:question_for_disease dv:black_leg.
+
+dv:question_non_urgent_black_leg_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe signs of lameness in your animal?" ;
+	dv:audiofile "sounds/lameness.mp3" ;
+	dv:question_for_symptom dv:lameness ;
+	dv:question_for_disease dv:black_leg.
+
+dv:question_non_urgent_black_leg_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:black_leg.
+
+dv:question_non_urgent_black_leg_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:black_leg.
+
+dv:question_non_urgent_bovine_tuberculosis_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have swollen lymph nodes?" ;
+	dv:audiofile "sounds/swollenLymphNodes.mp3" ;
+	dv:question_for_symptom dv:swollenLymphNodes ;
+	dv:question_for_disease dv:tuberculosis.
+
+dv:question_non_urgent_bovine_tuberculosis_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal cough?" ;
+	dv:audiofile "sounds/cough.mp3" ;
+	dv:question_for_symptom dv:cough ;
+	dv:question_for_disease dv:tuberculosis.
+
+dv:question_non_urgent_bovine_tuberculosis_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:tuberculosis.
+
+dv:question_non_urgent_bovine_tuberculosis_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:tuberculosis.
+
+dv:question_non_urgent_brucellosis_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal have an abortion recently?" ;
+	dv:audiofile "sounds/abortion.mp3" ;
+	dv:question_for_symptom dv:abortion ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal give birth to a weak calf recently?" ;
+	dv:audiofile "sounds/weakCalfBorn.mp3" ;
+	dv:question_for_symptom dv:weakCalfBorn ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal give birth to a stillborn recently?" ;
+	dv:audiofile "sounds/stillBorn.mp3" ;
+	dv:question_for_symptom dv:stillBorn ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal show signs of nervousness?" ;
+	dv:audiofile "sounds/nervousness.mp3" ;
+	dv:question_for_symptom dv:nervousness ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did you observe retention of the membranes after your animal gave birth?" ;
+	dv:audiofile "sounds/retentionMembranes.mp3" ;
+	dv:question_for_symptom dv:retentionMembranes ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_brucellosis_7
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did you observe infection of the membranes after your animal gave birth?" ;
+	dv:audiofile "sounds/infectionMembranes.mp3" ;
+	dv:question_for_symptom dv:infectionMembranes ;
+	dv:question_for_disease dv:brucellosis.
+
+dv:question_non_urgent_cbpp_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have breathing difficulties?" ;
+	dv:audiofile "sounds/difficultBreathing.mp3" ;
+	dv:question_for_symptom dv:difficultBreathing ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_cbpp_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe a loss in condition in your animal?" ;
+	dv:audiofile "sounds/lossCondition.mp3" ;
+	dv:question_for_symptom dv:lossCondition ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_cbpp_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_cbpp_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is your animal unwilling to move?" ;
+	dv:audiofile "sounds/unwillingnessToMove.mp3" ;
+	dv:question_for_symptom dv:unwillingnessToMove ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_cbpp_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is there snot coming out of the nose of your animal?" ;
+	dv:audiofile "sounds/snot.mp3" ;
+	dv:question_for_symptom dv:snot ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_cbpp_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:cbpp.
+
+dv:question_non_urgent_dehydration_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from diarrhea?" ;
+	dv:audiofile "sounds/diarrhea.mp3" ;
+	dv:question_for_symptom dv:diarrhea ;
+	dv:question_for_disease dv:dehydration.
+
+dv:question_non_urgent_dehydration_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal drink less water than usual?" ;
+	dv:audiofile "sounds/drinksLittle.mp3" ;
+	dv:question_for_symptom dv:drinksLittle ;
+	dv:question_for_disease dv:dehydration.
+
+dv:question_non_urgent_dehydration_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from weight loss?" ;
+	dv:audiofile "sounds/weightLoss.mp3" ;
+	dv:question_for_symptom dv:weightLoss ;
+	dv:question_for_disease dv:dehydration.
+
+dv:question_non_urgent_foot_mouth_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have quivering lips and a frothing mouth?" ;
+	dv:audiofile "sounds/quiveringLipsAndFrothingMouth.mp3" ;
+	dv:question_for_symptom dv:quiveringLipsAndFrothingMouth ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have blisters on its teats?" ;
+	dv:audiofile "sounds/blistersTeats.mp3" ;
+	dv:question_for_symptom dv:blistersTeats ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have blisters in its mouth?" ;
+	dv:audiofile "sounds/blistersMouth.mp3" ;
+	dv:question_for_symptom dv:blistersMouth ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from weight loss?" ;
+	dv:audiofile "sounds/weightLoss.mp3" ;
+	dv:question_for_symptom dv:weightLoss ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe signs of lameness in your animal?" ;
+	dv:audiofile "sounds/lameness.mp3" ;
+	dv:question_for_symptom dv:lameness ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did you observe a drop in the milk production?" ;
+	dv:audiofile "sounds/dropMilkProduction.mp3" ;
+	dv:question_for_symptom dv:dropMilkProduction ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_7
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_foot_mouth_8
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:foot_mouth.
+
+dv:question_non_urgent_plastic_bag_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal appear bloated?" ;
+	dv:audiofile "sounds/bloat.mp3" ;
+	dv:question_for_symptom dv:bloat ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_plastic_bag_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal drink more water than usual?" ;
+	dv:audiofile "sounds/drinkingLotsOfWater.mp3" ;
+	dv:question_for_symptom dv:drinkingLotsOfWater ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_plastic_bag_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe a loss in condition in your animal?" ;
+	dv:audiofile "sounds/lossCondition.mp3" ;
+	dv:question_for_symptom dv:lossCondition ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_plastic_bag_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from diarrhea?" ;
+	dv:audiofile "sounds/diarrhea.mp3" ;
+	dv:question_for_symptom dv:diarrhea ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_plastic_bag_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal show signs of fatigue?" ;
+	dv:audiofile "sounds/fatigue.mp3" ;
+	dv:question_for_symptom dv:fatigue ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_plastic_bag_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from weight loss?" ;
+	dv:audiofile "sounds/weightLoss.mp3" ;
+	dv:question_for_symptom dv:weightLoss ;
+	dv:question_for_disease dv:plastic_bag.
+
+dv:question_non_urgent_pneumonia_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal cough?" ;
+	dv:audiofile "sounds/cough.mp3" ;
+	dv:question_for_symptom dv:cough ;
+	dv:question_for_disease dv:pneumonia.
+
+dv:question_non_urgent_pneumonia_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is there snot coming out of the nose of your animal?" ;
+	dv:audiofile "sounds/snot.mp3" ;
+	dv:question_for_symptom dv:snot ;
+	dv:question_for_disease dv:pneumonia.
+
+dv:question_non_urgent_pneumonia_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is your animal breathing more rapidly than usual?" ;
+	dv:audiofile "sounds/rapidBreathing.mp3" ;
+	dv:question_for_symptom dv:rapidBreathing ;
+	dv:question_for_disease dv:pneumonia.
+
+dv:question_non_urgent_pneumonia_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:pneumonia.
+
+dv:question_non_urgent_ppr_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have blisters in its mouth?" ;
+	dv:audiofile "sounds/blistersMouth.mp3" ;
+	dv:question_for_symptom dv:blistersMouth ;
+	dv:question_for_disease dv:ppr.
+
+dv:question_non_urgent_ppr_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal suffer from diarrhea?" ;
+	dv:audiofile "sounds/diarrhea.mp3" ;
+	dv:question_for_symptom dv:diarrhea ;
+	dv:question_for_disease dv:ppr.
+
+dv:question_non_urgent_ppr_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Is there snot coming out of the nose of your animal?" ;
+	dv:audiofile "sounds/snot.mp3" ;
+	dv:question_for_symptom dv:snot ;
+	dv:question_for_disease dv:ppr.
+
+dv:question_non_urgent_ppr_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal die suddenly?" ;
+	dv:audiofile "sounds/suddenDeath.mp3" ;
+	dv:question_for_symptom dv:suddenDeath ;
+	dv:question_for_disease dv:ppr.
+
+dv:question_non_urgent_rabies_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have swallowing difficulties?" ;
+	dv:audiofile "sounds/difficultSwallowing.mp3" ;
+	dv:question_for_symptom dv:difficultSwallowing ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have an altered voice?" ;
+	dv:audiofile "sounds/alteredVocalisation.mp3" ;
+	dv:question_for_symptom dv:alteredVocalisation ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal show aggressive behavior?" ;
+	dv:audiofile "sounds/aggressive.mp3" ;
+	dv:question_for_symptom dv:aggressive ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal make exaggerated movements?" ;
+	dv:audiofile "sounds/exaggeratedMovements.mp3" ;
+	dv:question_for_symptom dv:exaggeratedMovements ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal show an increase in sexual activities?" ;
+	dv:audiofile "sounds/increaseSexualActivity.mp3" ;
+	dv:question_for_symptom dv:increaseSexualActivity ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did you observe a drop in the milk production?" ;
+	dv:audiofile "sounds/dropMilkProduction.mp3" ;
+	dv:question_for_symptom dv:dropMilkProduction ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_rabies_7
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:rabies.
+
+dv:question_non_urgent_tetanus_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Are the muscles of the animal twitching?" ;
+	dv:audiofile "sounds/twitchingMuscles.mp3" ;
+	dv:question_for_symptom dv:twitchingMuscles ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tetanus_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe signs of stiffness in your animal?" ;
+	dv:audiofile "sounds/stiffness.mp3" ;
+	dv:question_for_symptom dv:stiffness ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tetanus_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe a pink mass in the eye of your animal?" ;
+	dv:audiofile "sounds/pinkMassEye.mp3" ;
+	dv:question_for_symptom dv:pinkMassEye ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tetanus_4
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have one or multiple wounds?" ;
+	dv:audiofile "sounds/wound.mp3" ;
+	dv:question_for_symptom dv:wound ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tetanus_5
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Do you observe that your animal is anxious and easily excited?" ;
+	dv:audiofile "sounds/anxiousAndEasilyExcited.mp3" ;
+	dv:question_for_symptom dv:anxiousAndEasilyExcited ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tetanus_6
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal collapse in the past couple of days?" ;
+	dv:audiofile "sounds/collapse.mp3" ;
+	dv:question_for_symptom dv:collapse ;
+	dv:question_for_disease dv:tetanus.
+
+dv:question_non_urgent_tickborne_1
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have a fever?" ;
+	dv:audiofile "sounds/fever.mp3" ;
+	dv:question_for_symptom dv:fever ;
+	dv:question_for_disease dv:tickborne.
+
+dv:question_non_urgent_tickborne_2
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Does your animal have loss of appetite?" ;
+	dv:audiofile "sounds/appetiteLoss.mp3" ;
+	dv:question_for_symptom dv:appetiteLoss ;
+	dv:question_for_disease dv:tickborne.
+
+dv:question_non_urgent_tickborne_3
+	a dv:Question;
+	dv:QuestionType dv:SymptomQuestionType;
+	rdfs:label "Did your animal have an abortion recently?" ;
+	dv:audiofile "sounds/abortion.mp3" ;
+	dv:question_for_symptom dv:abortion ;
+	dv:question_for_disease dv:tickborne.
