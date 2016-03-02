@@ -3,7 +3,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix  dv: <https://w3id.org/w4ra/digivet/> .
 @prefix  xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix  dv: <https://w3id.org/w4ra/digivet/example/> .
+@prefix  ex: <https://w3id.org/w4ra/digivet/example/> .
 @prefix  foaf: <http://xmlns.com/foaf/0.1/> .
 
 # --- fake patient data ---
