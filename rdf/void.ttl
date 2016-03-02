@@ -6,7 +6,7 @@
 @prefix     rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix      xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix       dc: <http://purl.org/dc/terms/> .
-@prefix  dv: <http://example.org/digivet/> .
+@prefix  dv: <https://w3id.org/w4ra/digivet/> .
 
 @prefix oa: <http://www.w3.org/ns/oa#> .
 
