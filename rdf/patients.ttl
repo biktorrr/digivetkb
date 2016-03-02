@@ -1,0 +1,115 @@
+@prefix    rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix     rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix  dv: <http://example.org/digivet/> .
+@prefix  xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix  ex: <http://example.org/digivet/example/> .
+@prefix  foaf: <http://xmlns.com/foaf/0.1/> .
+
+# --- fake patient data ---
+
+
+ex:John_Elba
+	a foaf:Person;
+	dv:has_case ex:case_elba_1;
+	dv:has_case ex:case_elba_2;
+	dv:has_case ex:case_elba_3;
+	foaf:name "John Elba";
+	foaf:based_near <http://sws.geonames.org/2300626/> .
+
+# One case can have multiple animals. Animal can have multiple cases
+ex:case_elba_1
+	a dv:Case;
+	dcterms:date	"2016-03-02"^^xsd:date ;
+	dv:case_has_animal ex:elba_cow1;
+	dv:has_symptom dv:hardBallInStomach;
+	dv:has_disease dv:plastic_bag.
+
+ex:case_elba_2
+	a dv:Case;
+	dcterms:date	"2015-11-10"^^xsd:date ;
+	dv:case_has_animal ex:elba_cow1;
+	dv:has_symptom dv:hardBallInStomach;
+	dv:has_disease dv:plastic_bag.
+	
+ex:case_elba_3
+	a dv:Case;
+	dcterms:date	"2015-11-10"^^xsd:date ;
+	dv:case_has_animal ex:elba_cow2;
+	dv:has_symptom dv:extremelyThin;
+	dv:has_symptom dv:swollenLymphNodes;
+	dv:has_disease dv:bovine_tuberculosis.	
+	
+ex:elba_cow1
+	a dv:Cow;
+	rdfs:label "Cow 1 of John Elba".
+
+ex:elba_cow2
+	a dv:Cow;
+	rdfs:label "Cow 2 of John Elba".	
+	
+	
+# Another guy	
+
+ex:Boris_Quarshie
+	a foaf:Person;
+	dv:has_case ex:case_kodjoe_1;
+	dv:has_case ex:case_kodjoe_2;
+	foaf:name "Boris Quarshie";
+	foaf:based_near <http://sws.geonames.org/2300660/> .
+
+ex:case_quarshie_1
+	a dv:Case;
+	dcterms:date	"2015-08-01"^^xsd:date ;
+	dv:case_has_animal ex:quarshie_cow1;
+	dv:has_symptom dv:hardBallInStomach..
+
+ex:case_quarshie_2
+	a dv:Case;
+	dcterms:date	"2015-10-05"^^xsd:date ;
+	dv:case_has_animal ex:quarshie_goat1 ;
+	dv:has_symptom dv:extremelyThin;
+	dv:has_disease dv:bovine_tuberculosis.	
+	
+	
+ex:quarshie_cow1
+	a dv:Cow;
+	rdfs:label "Cow of Boris Quarshie".
+
+ex:quarshie_goat1
+	a dv:Goat;
+	rdfs:label "Goat of Boris Quarshie".	
+	
+# Another guy	
+	
+ex:Akosua_Kodjoe
+	a foaf:Person;
+	dv:has_case ex:case_kodjoe_1;
+	dv:has_case ex:case_kodjoe_2;
+	foaf:name "Akosua Kodjoe";
+	foaf:based_near <http://sws.geonames.org/2300626/> .
+
+ex:case_kodjoe_1
+	a dv:Case;
+	dcterms:date	"2016-02-01"^^xsd:date ;
+	dv:case_has_animal ex:kodjoe_cow1;
+	dv:has_symptom dv:hardBallInStomach;
+	dv:has_disease dv:plastic_bag.
+
+ex:case_kodjoe_2
+	a dv:Case;
+	dcterms:date	"2015-10-10"^^xsd:date ;
+	dv:case_has_animal ex:kodjoe_sheep1;
+	dv:has_symptom dv:swollenLymphNodes;
+	dv:has_disease dv:bovine_tuberculosis.	
+	
+	
+ex:kodjoe_cow1
+	a dv:Cow;
+	rdfs:label "Cow of Akosua Kodjoe".
+
+ex:kodjoe_sheep1
+	a dv:Sheep;
+	rdfs:label "Sheep of Akosua Kodjoe".	
+		
+	

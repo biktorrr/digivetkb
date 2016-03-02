@@ -1,0 +1,106 @@
+@prefix    rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix     rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix  dv: <http://example.org/digivet/> .
+@prefix  foaf: <http://xmlns.com/foaf/0.1/> .
+
+# --- PATIENT SCHEMA ---
+
+dv:Case
+	a rdfs:Class ;
+	rdfs:label "Case" .
+	
+dv:case_has_animal
+	a rdf:Property ;
+	rdfs:domain dv:Case ;
+	rdfs:label "has animal" .
+
+dv:has_case
+	a rdf:Property ;
+	rdfs:domain foaf:Person ;
+	rdfs:label "has case" ;
+	rdfs:range dv:Case .
+
+dv:has_disease
+	a rdf:Property ;
+	rdfs:domain dv:Case ;
+	rdfs:label "is diagnosed with disease" ;
+	rdfs:range rdfs:Resource .
+
+dv:has_symptom
+	a rdf:Property ;
+	rdfs:domain dv:Case ;
+	rdfs:label "has observed symptom" ;
+	rdfs:range rdfs:Resource .
+	
+# --- SCHEMA ----
+
+
+dv:Disease
+	a rdfs:Class ;
+	rdfs:label "Disease" .
+
+dv:Question
+	a rdfs:Class ;
+	rdfs:label "Question" .
+
+dv:QuestionType
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "QuestionType" ;
+	rdfs:range rdfs:Resource .
+
+dv:Symptom
+	a rdfs:Class ;
+	rdfs:label "Symptom" .
+
+dv:audiofile
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "audiofile" ;
+	rdfs:range rdfs:Literal .
+
+dv:canCarryDisease
+	a rdf:Property ;
+	rdfs:domain rdfs:Class ;
+	rdfs:label "canCarryDisease" .
+
+dv:id_general_question
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "id_general_question" ;
+	rdfs:range rdfs:Literal .
+
+dv:questionType
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "questionType" ;
+	rdfs:range rdfs:Resource .
+
+dv:question_for_animal
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "question_for_animal" ;
+	rdfs:range rdfs:Class .
+
+dv:question_for_disease
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "question_for_disease" .
+
+dv:question_for_symptom
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "question_for_symptom" ;
+	rdfs:range dv:Symptom .
+
+dv:symptom_for_disease
+	a rdf:Property ;
+	rdfs:domain dv:Symptom ;
+	rdfs:label "symptom_for_disease" .
+
+dv:use_table
+	a rdf:Property ;
+	rdfs:domain dv:Question ;
+	rdfs:label "use_table" ;
+	rdfs:range rdfs:Literal .
