@@ -79,7 +79,12 @@ dv:tetanus
 dv:tickborne	
 	a dv:Disease;
 	rdfs:label "Tickborne"@en .
-	 	
+
+	#generic one, also m and v (not sure where they go)
+dv:brucellosis
+	a dv:Disease;
+	rdfs:label "Brucellosis_m"@en .	 	
+		
 dv:brucellosis_m	
 	a dv:Disease;
 	rdfs:label "Brucellosis_m"@en .
@@ -129,59 +134,59 @@ dv:rabies
 dv:depression
 	a dv:Symptom;
 	rdfs:label	"depression";
-	dv:symptom_for_disease dv:PPR	.
+	dv:symptom_for_disease dv:ppr	.
 dv:hardBallInStomach
 	a dv:Symptom;
 	rdfs:label	"hardBallInStomach" ;
-	dv:symptom_for_disease dv:Plastic_bag	.
+	dv:symptom_for_disease dv:plastic_bag	.
 dv:spasm
 	a dv:Symptom;
 	rdfs:label	"spasm" ;
-	dv:symptom_for_disease dv:Tetanus	.
+	dv:symptom_for_disease dv:tetanus	.
 dv:fatigue
 	a dv:Symptom;
 	rdfs:label	"fatigue" ;
-	dv:symptom_for_disease dv:Tickborne	.
+	dv:symptom_for_disease dv:tickborne	.
 dv:recent_birth
 	a dv:Symptom;
 	rdfs:label	"recent_birth" ;
-	dv:symptom_for_disease dv:Brucellosis	.
+	dv:symptom_for_disease dv:brucellosis	.
 dv:swollenTesticles
 	a dv:Symptom;
 	rdfs:label	"swollenTesticles" ;
-	dv:symptom_for_disease dv:Brucellosis	.
+	dv:symptom_for_disease dv:brucellosis	.
 dv:convulsions
 	a dv:Symptom;
 	rdfs:label	"convulsions" ;
-	dv:symptom_for_disease dv:Anthrax	.
+	dv:symptom_for_disease dv:anthrax	.
 dv:isolateFromHerd
 	a dv:Symptom;
 	rdfs:label	"isolateFromHerd" ;
-	dv:symptom_for_disease dv:CBPP	.
+	dv:symptom_for_disease dv:cbpp	.
 dv:swellingThigh
 	a dv:Symptom;
 	rdfs:label	"swellingThigh" ;
-	dv:symptom_for_disease dv:Black_leg	.
+	dv:symptom_for_disease dv:black_leg	.
 dv:blistersFeet
 	a dv:Symptom;
 	rdfs:label	"blistersFeet" ;
-	dv:symptom_for_disease dv:Foot-and-mouth	.
+	dv:symptom_for_disease dv:foot-and-mouth	.
 dv:eyesInOrbit
 	a dv:Symptom;
 	rdfs:label	"eyesInOrbit" ;
-	dv:symptom_for_disease dv:Dehydration	.
+	dv:symptom_for_disease dv:dehydration	.
 dv:extremelyThin
 	a dv:Symptom;
 	rdfs:label	"extremelyThin" ;
-	dv:symptom_for_disease dv:Bovine_tuberculosis	.
+	dv:symptom_for_disease dv:bovine_tuberculosis	.
 dv:dropHead
 	a dv:Symptom;
 	rdfs:label	"dropHead" ;
-	dv:symptom_for_disease dv:Pneumonia	.
+	dv:symptom_for_disease dv:pneumonia	.
 dv:seizures
 	a dv:Symptom;
 	rdfs:label	"seizures" ;
-	dv:symptom_for_disease dv:Rabies	.
+	dv:symptom_for_disease dv:rabies	.
 dv:trembling
 	a dv:Symptom;
 	rdfs:label	"trembling" ;

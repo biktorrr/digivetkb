@@ -53,16 +53,16 @@ ex:elba_cow2
 
 ex:Boris_Quarshie
 	a foaf:Person;
-	dv:has_case ex:case_kodjoe_1;
-	dv:has_case ex:case_kodjoe_2;
+	dv:has_case ex:case_quarshie_1;
+	dv:has_case ex:case_quarshie_2;
 	foaf:name "Boris Quarshie";
-	foaf:based_near <http://sws.geonames.org/2300660/> .
+	foaf:based_near <http://sws.geonames.org/2294174/> .
 
 ex:case_quarshie_1
 	a dv:Case;
 	dcterms:date	"2015-08-01"^^xsd:date ;
 	dv:case_has_animal ex:quarshie_cow1;
-	dv:has_symptom dv:hardBallInStomach..
+	dv:has_symptom dv:hardBallInStomach.
 
 ex:case_quarshie_2
 	a dv:Case;
@@ -112,4 +112,75 @@ ex:kodjoe_sheep1
 	a dv:Sheep;
 	rdfs:label "Sheep of Akosua Kodjoe".	
 		
+# Another guy	
 	
+ex:Kwasi_Amoah
+	a foaf:Person;
+	dv:has_case ex:case_amoah_1;
+	dv:has_case ex:case_amoah_2;
+	foaf:name "Kwasi Amoah";
+	foaf:based_near <http://sws.geonames.org/2294174/> .
+
+ex:case_amoah_1
+	a dv:Case;
+	dcterms:date	"2016-01-12"^^xsd:date ;
+	dv:case_has_animal ex:amoah_goat1;
+	dv:has_symptom dv:depression;
+	dv:has_symptom dv:diarrhea;
+	dv:has_disease dv:ppr.
+
+ex:case_amoah_2
+	a dv:Case;
+	dcterms:date	"2015-09-10"^^xsd:date ;
+	dv:case_has_animal ex:amoah_goat2;
+	dv:has_symptom dv:spasm;
+	dv:has_symptom dv:pinkMassEye;
+	dv:has_symptom dv:stiffness;
+	dv:has_symptom dv:collapse;
+	dv:has_disease dv:tetanus.	
+	
+	
+ex:amoah_goat1
+	a dv:Goat;
+	rdfs:label "Goat 1 of Kwasi Amoah".
+
+ex:amoah_goat2
+	a dv:Sheep;
+	rdfs:label "Goat 2 of Kwasi Amoah".	
+		
+	
+# Another guy	
+	
+ex:Kofi_Mensah
+	a foaf:Person;
+	dv:has_case ex:case_mensah_1;
+	dv:has_case ex:case_mensah_2;
+	foaf:name "Kofi Mensah";
+	foaf:based_near <http://sws.geonames.org/2294174/> .
+
+ex:case_mensah_1
+	a dv:Case;
+	dcterms:date	"2015-02-01"^^xsd:date ;
+	dv:case_has_animal ex:mensah_goat1;
+	dv:has_symptom dv:depression;
+	dv:has_symptom dv:diarrhea;
+	dv:has_disease dv:ppr.
+
+ex:case_mensah_2
+	a dv:Case;
+	dcterms:date	"2015-10-12"^^xsd:date ;
+	dv:case_has_animal ex:mensah_pig1;
+	dv:has_symptom dv:spasm;
+	dv:has_symptom dv:pinkMassEye;
+	dv:has_symptom dv:stiffness;
+	dv:has_disease dv:tetanus.	
+	
+	
+ex:mensah_goat1
+	a dv:goat;
+	rdfs:label "Goat of Kofi Mensah".
+
+ex:mensah_pig1
+	a dv:Pig;
+	rdfs:label "Pig of Kofi Mensah".	
+		
